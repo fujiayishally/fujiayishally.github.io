@@ -136,25 +136,25 @@
 
 
 
-<meta name="description" content="这是一篇安装笔记，供日后需要时查阅。">
+<meta name="description" content="前言首先，我们需要清楚的是数据库服务器和数据库服务器驱动。  在官网下载数据库服务器，本地安装 关联数据库服务器和数据存储位置，也就是建好数据存放的目录，然后把路径告诉数据库服务器,启动服务器守护进程mongod 使用命令行操作数据库进行增删改查等操作 实际开发中，我们是不会这样子直接输入命令行的，所以我们要安装数据库驱动来协助开发。mongodb是官方为node环境指定的Mongo驱动。 在项目">
 <meta name="keywords" content="mongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装MongoDB">
 <meta property="og:url" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/index.html">
 <meta property="og:site_name" content="Shally&#39;s Blog">
-<meta property="og:description" content="这是一篇安装笔记，供日后需要时查阅。">
+<meta property="og:description" content="前言首先，我们需要清楚的是数据库服务器和数据库服务器驱动。  在官网下载数据库服务器，本地安装 关联数据库服务器和数据存储位置，也就是建好数据存放的目录，然后把路径告诉数据库服务器,启动服务器守护进程mongod 使用命令行操作数据库进行增删改查等操作 实际开发中，我们是不会这样子直接输入命令行的，所以我们要安装数据库驱动来协助开发。mongodb是官方为node环境指定的Mongo驱动。 在项目">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1.JPG">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1-1.JPG">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1-2.JPG">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1-3.JPG">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-2-1.JPG">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-4-1.JPG">
-<meta property="og:updated_time" content="2019-07-11T11:54:52.422Z">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-1.JPG">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-1-1.JPG">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-1-2.JPG">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-1-3.JPG">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-2-1.JPG">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-4-1.JPG">
+<meta property="og:updated_time" content="2019-07-16T10:48:09.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装MongoDB">
-<meta name="twitter:description" content="这是一篇安装笔记，供日后需要时查阅。">
-<meta name="twitter:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1.JPG">
+<meta name="twitter:description" content="前言首先，我们需要清楚的是数据库服务器和数据库服务器驱动。  在官网下载数据库服务器，本地安装 关联数据库服务器和数据存储位置，也就是建好数据存放的目录，然后把路径告诉数据库服务器,启动服务器守护进程mongod 使用命令行操作数据库进行增删改查等操作 实际开发中，我们是不会这样子直接输入命令行的，所以我们要安装数据库驱动来协助开发。mongodb是官方为node环境指定的Mongo驱动。 在项目">
+<meta name="twitter:image" content="https://fujiayishally.github.io/2018/07/13/安装MongoDB/install-mongodb-1.JPG">
 
 
 
@@ -397,8 +397,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-11T19:54:52+08:00">
-                2019-07-11
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-16T18:48:09+08:00">
+                2019-07-16
               </time>
             
           </span>
@@ -461,10 +461,6 @@
           
           
           
-              <div class="post-description text-left">
-                  这是一篇安装笔记，供日后需要时查阅。
-              </div>
-          
 
         </div>
       </header>
@@ -484,15 +480,15 @@
 <li>实际开发中，我们是不会这样子直接输入命令行的，所以我们要安装数据库驱动来协助开发。<a href="https://www.npmjs.com/package/mongodb" target="_blank" rel="noopener">mongodb</a>是官方为node环境指定的Mongo驱动。</li>
 <li>在项目中成功安装好驱动后，就可以通过驱动连接数据库并进行相关数据库操作了。</li>
 </ol>
-<h1 id="系统win10-64位安装"><a href="#系统win10-64位安装" class="headerlink" title="系统win10 64位安装"></a>系统win10 64位安装</h1><h2 id="1-安装Mogodb-service"><a href="#1-安装Mogodb-service" class="headerlink" title="1.安装Mogodb service"></a>1.安装Mogodb service</h2><p>到<a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">官网</a>下载安装包。安装的时候，如果不想放到默认路径，可以自己重新选择安装目录。</p>
-<p><img src="2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1.JPG" alt="install-mongodb-1"></p>
-<p>安装完成后，我们进入<code>~安装目录/bin</code>,里面都是些mongdb的运行程序:</p>
-<p><img src="2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1-1.JPG" alt="install-mongodb-1-1"></p>
-<h2 id="2-启动数据库"><a href="#2-启动数据库" class="headerlink" title="2.启动数据库"></a>2.启动数据库</h2><p>接下来我们要建立数据库服务器和数据存储地址的联系，在此之前，请先确保你的存储目录已经建好，因为MongoDB不会帮你新建，从而建联失败。<br>例如我要把数据存在<code>G:\mongodb\data\</code>下，我就得先建好这个目录，确保它能被找到。另外我们还可以新建一个日志文件<code>G:\mongodb\log\mongodb.log</code>记录日志。<br>目录建好后，运行MongoDB的守护进程<code>mongod.exe</code>，守护数据库服务器与这个地址的连接。<br>如果你在<code>~安装目录的\bin</code> 目录下，你可以这样运行：</p>
+<h1 id="系统win10-64位安装"><a href="#系统win10-64位安装" class="headerlink" title="系统win10 64位安装"></a>系统win10 64位安装</h1><h2 id="安装Mogodb-service"><a href="#安装Mogodb-service" class="headerlink" title="安装Mogodb service"></a>安装Mogodb service</h2><p>到<a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">官网</a>下载安装包。安装的时候，如果不想放到默认路径，可以自己重新选择安装目录。</p>
+<p><img src="install-mongodb-1.JPG" alt="install-mongodb-1"></p>
+<p>安装完成后，进入<code>~安装目录/bin</code>,里面都是些mongdb的运行程序:</p>
+<p><img src="install-mongodb-1-1.JPG" alt="install-mongodb-1-1"></p>
+<h2 id="启动数据库"><a href="#启动数据库" class="headerlink" title="启动数据库"></a>启动数据库</h2><p>接下来我们要建立数据库服务器和数据存储地址的联系，在此之前，请先确保你的存储目录已经建好，因为MongoDB不会帮你新建，从而建联失败。<br>例如我要把数据存在<code>G:\mongodb\data\</code>下，我就得先建好这个目录，确保它能被找到。另外我们还可以新建一个日志文件<code>G:\mongodb\log\mongodb.log</code>记录日志。<br>目录建好后，运行MongoDB的守护进程<code>mongod.exe</code>，守护数据库服务器与这个地址的连接。<br>如果你在<code>~安装目录的\bin</code> 目录下，你可以这样运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; .\mongod --dbpath g:\mongodb\data</span><br></pre></td></tr></table></figure>
 
 <p>但你应该不想每次都进入到该目录去运行mongod命令，解决办法是在环境变量中给<code>path</code>添加<code>~安装目录\bin</code>路径：</p>
-<p><img src="2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1-2.JPG" alt="install-mongodb-1-2"></p>
+<p><img src="install-mongodb-1-2.JPG" alt="install-mongodb-1-2"></p>
 <p>然后在任何位置都可以直接运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongod --dbpath g:\mongodb\data</span><br></pre></td></tr></table></figure>
 
@@ -506,22 +502,22 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod.exe --logpath g:\mongodb\log\mongodb.log --logappend --dbpath g:\mongodb\data --directoryperdb --serviceName mongodb -install</span><br></pre></td></tr></table></figure>
 
 <p>执行完后可以在控制面板的本地服务里看到新注册的服务:</p>
-<p><img src="2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-1-3.JPG" alt="install-mongodb-1-3"></p>
+<p><img src="install-mongodb-1-3.JPG" alt="install-mongodb-1-3"></p>
 <p>注册完成后，数据库服务器其实已经在后台启动了。你可以在任务管理器里看到正在运行的进程：</p>
-<p><img src="2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-2-1.JPG" alt="install-mongodb-2-1"></p>
+<p><img src="install-mongodb-2-1.JPG" alt="install-mongodb-2-1"></p>
 <p>回到命令行，在终端连接数据库：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongodb</span><br></pre></td></tr></table></figure>
 
 <p>成功连接后，你会看到一些数据库及连接相关信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MongoDB shell version v4.0.0</span><br><span class="line">connecting to: mongodb://127.0.0.1:27017</span><br><span class="line">MongoDB server version: 4.0.0</span><br><span class="line">Welcome to the MongoDB shell.</span><br><span class="line">For interactive help, type &quot;help&quot;.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MongoDB shell version v4<span class="number">.0</span><span class="number">.0</span></span><br><span class="line">connecting to: mongodb://<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">27017</span></span><br><span class="line">MongoDB server version: <span class="number">4.0</span><span class="number">.0</span></span><br><span class="line">Welcome to the MongoDB shell.</span><br><span class="line">For interactive help, type <span class="string">"help"</span>.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
 <p>至此，数据库正式启动完成，可以通过命令行操作数据库，或者你也可以起一个project，安装数据库驱动，用node来跑一个。</p>
-<h2 id="3-操作数据库"><a href="#3-操作数据库" class="headerlink" title="3.操作数据库"></a>3.操作数据库</h2><p>你可以直接在命令行操作数据库，感兴趣的朋友可以参考官方的<a href="https://docs.mongodb.com/manual/mongo/" target="_blank" rel="noopener">这份文档</a>。具体的教程还是官网最好，这里就不赘述了。</p>
-<h2 id="4-数据库驱动"><a href="#4-数据库驱动" class="headerlink" title="4. 数据库驱动"></a>4. 数据库驱动</h2><p><a href="https://www.npmjs.com/package/mongodb" target="_blank" rel="noopener">mongodb</a>是官方指定的node环境数据库驱动。跟着里面的教程敲一遍，mongodb的基本用法基本就到手了。这里也不赘述。<br>注意，此时，前面通过命令行<code>mongodb</code>建立的数据库连接和这里是没关系的。实际上是两种连接数据库方式。<br>如果能正确使用mongodb连接数据库，它会得到和文档一样的结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const MongoClient = require(&apos;mongodb&apos;).MongoClient</span><br><span class="line">const assert = require(&apos;assert&apos;)</span><br><span class="line">const url = &apos;mongodb://127.0.0.1:27017&apos;</span><br><span class="line">const dbName = &apos;test&apos; //数据安装完成后，会默认有一张test表</span><br><span class="line"></span><br><span class="line">MongoClient.connect(url, &#123;</span><br><span class="line"> useNewUrlParser: true</span><br><span class="line">&#125;, (err, client) =&gt; &#123;</span><br><span class="line"> assert.equal(null, err);</span><br><span class="line"> console.log(&apos;Connected successfully to server&apos;);</span><br><span class="line"> client.close()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h2><p>你可以直接在命令行操作数据库，感兴趣的朋友可以参考官方的<a href="https://docs.mongodb.com/manual/mongo/" target="_blank" rel="noopener">这份文档</a>。具体的教程还是官网最好，这里就不赘述了。</p>
+<h2 id="数据库驱动"><a href="#数据库驱动" class="headerlink" title="数据库驱动"></a>数据库驱动</h2><p><a href="https://www.npmjs.com/package/mongodb" target="_blank" rel="noopener">mongodb</a>是官方指定的node环境数据库驱动。跟着里面的教程敲一遍，mongodb的基本用法基本就到手了。这里也不赘述。<br>注意，此时，前面通过命令行<code>mongodb</code>建立的数据库连接和这里是没关系的。实际上是两种连接数据库方式。<br>如果能正确使用mongodb连接数据库，它会得到和文档一样的结果：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MongoClient = <span class="built_in">require</span>(<span class="string">'mongodb'</span>).MongoClient</span><br><span class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>)</span><br><span class="line"><span class="keyword">const</span> url = <span class="string">'mongodb://127.0.0.1:27017'</span></span><br><span class="line"><span class="keyword">const</span> dbName = <span class="string">'test'</span> <span class="comment">//数据安装完成后，会默认有一张test表</span></span><br><span class="line"></span><br><span class="line">MongoClient.connect(url, &#123;</span><br><span class="line"> useNewUrlParser: <span class="literal">true</span></span><br><span class="line">&#125;, (err, client) =&gt; &#123;</span><br><span class="line"> assert.equal(<span class="literal">null</span>, err);</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'Connected successfully to server'</span>);</span><br><span class="line"> client.close()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>正确运行会看到下面结果：</p>
-<p><img src="2018-07-13-%E5%AE%89%E8%A3%85MongoDB/install-mongodb-4-1.JPG" alt="install-mongodb-4-1"></p>
+<p><img src="install-mongodb-4-1.JPG" alt="install-mongodb-4-1"></p>
 <p>往后就是自己的事了，用mongodb做点有趣的事吧！</p>
 
       
@@ -649,7 +645,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -754,7 +750,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统win10-64位安装"><span class="nav-number">2.</span> <span class="nav-text">系统win10 64位安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Mogodb-service"><span class="nav-number">2.1.</span> <span class="nav-text">1.安装Mogodb service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-启动数据库"><span class="nav-number">2.2.</span> <span class="nav-text">2.启动数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-操作数据库"><span class="nav-number">2.3.</span> <span class="nav-text">3.操作数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-数据库驱动"><span class="nav-number">2.4.</span> <span class="nav-text">4. 数据库驱动</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统win10-64位安装"><span class="nav-number">2.</span> <span class="nav-text">系统win10 64位安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Mogodb-service"><span class="nav-number">2.1.</span> <span class="nav-text">安装Mogodb service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动数据库"><span class="nav-number">2.2.</span> <span class="nav-text">启动数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作数据库"><span class="nav-number">2.3.</span> <span class="nav-text">操作数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库驱动"><span class="nav-number">2.4.</span> <span class="nav-text">数据库驱动</span></a></li></ol></li></ol></div>
             
 
           </div>
