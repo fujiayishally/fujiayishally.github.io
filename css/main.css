@@ -418,14 +418,14 @@ caption,
 th,
 td {
   padding: 8px;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   font-weight: normal;
 }
 th,
 td {
-  border-bottom: 3px solid #ddd;
-  border-right: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 th {
   padding-bottom: 10px;
@@ -1854,7 +1854,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #39bb40;
+  background: #403913;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3068,8 +3068,20 @@ pre .javascript .function {
   margin: 0 0 10px;
   color: #666;
 }
+.content-wrap .post .post_index a {
+  border-bottom-color: transparent;
+  color: #555;
+  text-decoration: none;
+}
+.content-wrap .post .post_index a:hover {
+  border-bottom-color: #ccc;
+}
 .content-wrap .post .post_index .post_topic_img {
   margin-top: 10px;
+}
+.content-wrap .post .post_index .post_topic_img img {
+  padding: 0;
+  border: none;
 }
 .content-wrap .post .post_index .post_read_more {
   margin-top: 10px;
@@ -3081,15 +3093,18 @@ pre .javascript .function {
   background-color: rgba(96,169,166,0.5);
   color: #239f95;
 }
-.content-wrap .post .post-body a {
+.content-wrap .post .post_article {
+  margin-top: 30px;
+}
+.content-wrap .post .post_article a {
   border-bottom: none;
   color: #e77;
   text-decoration: none;
 }
-.content-wrap .post .post-body a:hover {
+.content-wrap .post .post_article a:hover {
   color: #004d61;
 }
-.content-wrap .post .post-body img {
+.content-wrap .post .post_article img {
   padding: 0;
   border: none;
 }
