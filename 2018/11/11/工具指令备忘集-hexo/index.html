@@ -144,13 +144,13 @@
 <meta property="og:site_name" content="Shally&#39;s Blog">
 <meta property="og:description" content="hexohexo是一个博客框架，能够快速生成静态网页。支持评论、访问数统计等功能插件扩展。可以和Github域名绑定。 定制主题和安装插件我选择的hexo主题是 NextT (因为很多人用)。需要自定义插件和修改主题样式时，可以看这篇NexT主题的优化定制修改指南。作者分门别类地收集了主题配置的各种可行操作，并预先踩实了官方文档中的一些坑，感谢。 部署到github在站点配置文件 _config.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://fujiayishally.github.io/2018/11/11/工具指令备忘集-hexo/git-1.PNG">
+<meta property="og:image" content="https://fujiayishally.github.io/2018/11/11/工具指令备忘集-hexo/git-1.jpg">
 <meta property="og:image" content="https://fujiayishally.github.io/2018/11/11/工具指令备忘集-hexo/Open-SSH-Agent.jpg">
-<meta property="og:updated_time" content="2019-07-16T11:10:31.156Z">
+<meta property="og:updated_time" content="2019-07-16T11:13:05.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工具指令备忘集">
 <meta name="twitter:description" content="hexohexo是一个博客框架，能够快速生成静态网页。支持评论、访问数统计等功能插件扩展。可以和Github域名绑定。 定制主题和安装插件我选择的hexo主题是 NextT (因为很多人用)。需要自定义插件和修改主题样式时，可以看这篇NexT主题的优化定制修改指南。作者分门别类地收集了主题配置的各种可行操作，并预先踩实了官方文档中的一些坑，感谢。 部署到github在站点配置文件 _config.">
-<meta name="twitter:image" content="https://fujiayishally.github.io/2018/11/11/工具指令备忘集-hexo/git-1.PNG">
+<meta name="twitter:image" content="https://fujiayishally.github.io/2018/11/11/工具指令备忘集-hexo/git-1.jpg">
 
 
 
@@ -393,7 +393,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-16T19:10:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-16T19:13:05+08:00">
                 2019-07-16
               </time>
             
@@ -528,7 +528,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh-keygen</span><br></pre></td></tr></table></figure>
 
 <p>执行完后，可看到如下提示：</p>
-<p><img src="git-1.PNG" alt="使用ssh-keygen生成ssh钥匙"></p>
+<p><img src="git-1.jpg" alt="使用ssh-keygen生成ssh钥匙"></p>
 <p>再次进入 <code>.ssh</code> 文件就可以看到生成的钥匙了。打开 <code>id_rsa.pub</code>文件，并把里面的内容复制到 GitHub &gt; Settings &gt; SSH and GPG keys &gt; new SSH key。同时还需要新建一个 <code>YourName.github.io</code>的仓库。（其实这个仓库的ssh下载地址就是 在 <code>hexo</code>&gt; <code>_config.yml</code> &gt; <code>deploy</code> &gt; <code>repo</code>配置的地址。</p>
 <h3 id="跳过提交密码"><a href="#跳过提交密码" class="headerlink" title="跳过提交密码"></a>跳过提交密码</h3><p>每次提交代码时总会出现密码输入提示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase for key &apos;/c/Users/fujia/.ssh/id_rsa&apos;</span><br></pre></td></tr></table></figure>
