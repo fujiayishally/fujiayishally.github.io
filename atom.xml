@@ -108,30 +108,6 @@
   </entry>
   
   <entry>
-    <title>每天一个CSS</title>
-    <link href="https://fujiayishally.github.io/2019/07/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AACSS/"/>
-    <id>https://fujiayishally.github.io/2019/07/11/每天一个CSS/</id>
-    <published>2019-07-11T11:51:48.000Z</published>
-    <updated>2019-07-15T23:30:50.832Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是一个<a href="https://github.com/fujiayishally/Daily-Cute-CSS" target="_blank" rel="noopener">Github个人项目</a>。</p>]]></content>
-    
-    <summary type="html">
-    
-      我尝试每天一个CSS样式实现，供以后在需要时查阅、比较和改进。若大家有更好的实现，可以提交Issues。共勉！
-    
-    </summary>
-    
-      <category term="前端" scheme="https://fujiayishally.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="CSS" scheme="https://fujiayishally.github.io/categories/%E5%89%8D%E7%AB%AF/CSS/"/>
-    
-    
-      <category term="CSS" scheme="https://fujiayishally.github.io/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>工具指令备忘集</title>
     <link href="https://fujiayishally.github.io/2018/11/11/%E5%B7%A5%E5%85%B7%E6%8C%87%E4%BB%A4%E5%A4%87%E5%BF%98%E9%9B%86-hexo/"/>
     <id>https://fujiayishally.github.io/2018/11/11/工具指令备忘集-hexo/</id>
