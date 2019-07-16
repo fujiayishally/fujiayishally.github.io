@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Comic Sans MS:300,300italic,400,400italic,700,700italic|BillieBarred:300,300italic,400,400italic,700,700italic|Comic Sans MS:300,300italic,400,400italic,700,700italic|Site Title:300,300italic,400,400italic,700,700italic|Comic Sans MS:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSS,">
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Shally's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="渐变是 image 的一种类型（gradient）,它分三种：线性、径向、圆锥。本文针对这些知识点进行了梳理。">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS:线性渐变">
+<meta property="og:url" content="https://fujiayishally.github.io/2019/07/11/CSS-渐变/index.html">
+<meta property="og:site_name" content="Shally&#39;s Blog">
+<meta property="og:description" content="渐变是 image 的一种类型（gradient）,它分三种：线性、径向、圆锥。本文针对这些知识点进行了梳理。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://fujiayishally.github.io/2019/07/11/CSS-渐变/%E6%B8%90%E5%8F%981.JPG">
+<meta property="og:image" content="https://fujiayishally.github.io/2019/07/11/CSS-渐变/demo.JPG">
+<meta property="og:updated_time" content="2019-07-15T23:30:57.888Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS:线性渐变">
+<meta name="twitter:description" content="渐变是 image 的一种类型（gradient）,它分三种：线性、径向、圆锥。本文针对这些知识点进行了梳理。">
+<meta name="twitter:image" content="https://fujiayishally.github.io/2019/07/11/CSS-渐变/%E6%B8%90%E5%8F%981.JPG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fujiayishally.github.io/2019/07/11/CSS-渐变/">
+
+
+
+
+
+  <title>CSS:线性渐变 | Shally's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <link href="http://cdn.repository.webfont.com/webfonts/nomal/131758/30014/5d2c5d30f629d813989324de.css" rel="stylesheet" type="text/css">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shally's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tv"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-inbox"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fujiayishally.github.io/2019/07/11/CSS-渐变/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shally Fu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/20348638?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shally's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS:线性渐变</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T23:13:18+08:00">
+                2019-07-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-16T07:30:57+08:00">
+                2019-07-16
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/07/11/CSS-渐变/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/11/CSS-渐变/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/07/11/CSS-渐变/" class="leancloud_visitors" data-flag-title="CSS:线性渐变">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+          
+          
+              <div class="post-description text-left">
+                  渐变是 image 的一种类型（gradient）,它分三种：线性、径向、圆锥。本文针对这些知识点进行了梳理。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+      <!--自定义，首页文章列表-->
+      
+        <h2 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h2><p>CSS3线性渐变的标准写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image: linear-gradient([&lt;angle&gt; | &lt;side-or-corner&gt;,]? &lt;color-stop&gt; [,&lt;color-stop&gt;]+ );</span><br></pre></td></tr></table></figure>
+
+<p>可以看出，线性渐变效果由方向（<code>&lt;angle&gt; | &lt;side-or-corner&gt;</code>可选）及起止色（<code>color-stop</code>至少一对）控制。下面将通过控制变量法，分别对这两者进行分析。</p>
+<h3 id="控制渐变方向"><a href="#控制渐变方向" class="headerlink" title="控制渐变方向"></a>控制渐变方向</h3><p>要明白渐变方向是怎样控制的，首先要明确三个规定：</p>
+<ol>
+<li>规定 <code>0deg</code> 时方向为<strong>上</strong></li>
+<li>规定 <code>0deg</code> 到 <code>180deg</code> 是顺时针方向</li>
+<li>默认方向是 <code>180deg</code>, 向下</li>
+</ol>
+<p>两个颜色的渐变描述起来是这样的：<code>颜色A</code> 沿着指定方向过渡到 <code>颜色B</code>，例如为两个颜色<code>white</code>和<code>black</code>设置渐变方向：</p>
+<ul>
+<li><code>to bottom</code>，就是 <code>white</code> 沿着向下方向过渡到 <code>black</code></li>
+<li><code>45deg</code>，就是 <code>white</code> 沿着 <code>45deg</code> 方向过渡到 颜色B（black）</li>
+</ul>
+<p>下面我用不同的方向值替换代码中的 <code>to bottom</code> 来加深理解：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: linear-gradient(to botton,white, black)</span><br></pre></td></tr></table></figure>
+
+<style>
+    .block{width:50%;height:3em;display:inline-block;}
+    .linear1-1{background:linear-gradient(white,black);}
+    .linear1-2{background:linear-gradient(to bottom,white,black);}
+    .linear1-3{background:linear-gradient(to top,white,black);}
+    .linear1-4{background:linear-gradient(to left,white,black);}
+    .linear1-5{background:linear-gradient(to right, white,black);}
+    .linear1-6{background:linear-gradient(to left top,white,black);}
+    .linear1-7{background:linear-gradient(to right top,white,black);}
+    .linear1-8{background:linear-gradient(to left bottom,white,black);}
+    .linear1-9{background:linear-gradient(to right bottom,white,black);}
+    .linear1-10{background:linear-gradient(180deg,white,black);}
+    .linear1-11{background:linear-gradient(180deg,white,black);}
+    .linear1-12{background:linear-gradient(0deg,white,black);}
+    .linear1-13{background:linear-gradient(-90deg,white,black);}
+    .linear1-14{background:linear-gradient(90deg,white,black);}
+    .linear1-15{background:linear-gradient(-45deg,white,black);}
+    .linear1-16{background:linear-gradient(45deg,white,black);}
+    .linear1-17{background:linear-gradient(-135deg,white,black);}
+    .linear1-18{background:linear-gradient(135deg,white,black);}
+</style>
+
+<table>
+<thead>
+<tr>
+<th align="center">关键词</th>
+<th align="center">效果</th>
+<th align="center">角度</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">默认</td>
+<td align="center"><div class="block linear1-1"></div></td>
+<td align="center">180deg</td>
+<td align="center"><div class="block linear1-10"></div></td>
+</tr>
+<tr>
+<td align="center">to bottom</td>
+<td align="center"><div class="block linear1-2"></div></td>
+<td align="center">180deg</td>
+<td align="center"><div class="block linear1-11"></div></td>
+</tr>
+<tr>
+<td align="center">to top</td>
+<td align="center"><div class="block linear1-3"></div></td>
+<td align="center">0deg</td>
+<td align="center"><div class="block linear1-12"></div></td>
+</tr>
+<tr>
+<td align="center">to left</td>
+<td align="center"><div class="block linear1-4"></div></td>
+<td align="center">-90deg</td>
+<td align="center"><div class="block linear1-13"></div></td>
+</tr>
+<tr>
+<td align="center">to right</td>
+<td align="center"><div class="block linear1-5"></div></td>
+<td align="center">90deg</td>
+<td align="center"><div class="block linear1-14"></div></td>
+</tr>
+<tr>
+<td align="center">to left top</td>
+<td align="center"><div class="block linear1-6"></div></td>
+<td align="center">-45deg</td>
+<td align="center"><div class="block linear1-15"></div></td>
+</tr>
+<tr>
+<td align="center">to right top</td>
+<td align="center"><div class="block linear1-7"></div></td>
+<td align="center">45deg</td>
+<td align="center"><div class="block linear1-16"></div></td>
+</tr>
+<tr>
+<td align="center">to left bottom</td>
+<td align="center"><div class="block linear1-8"></div></td>
+<td align="center">-135deg</td>
+<td align="center"><div class="block linear1-17"></div></td>
+</tr>
+<tr>
+<td align="center">to right bottom</td>
+<td align="center"><div class="block linear1-9"></div></td>
+<td align="center">135deg</td>
+<td align="center"><div class="block linear1-18"></div></td>
+</tr>
+</tbody></table>
+<p>方向关键词的制订是有一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">演变历史的</a>。</p>
+<h3 id="控制起止颜色-lt-color-stop-gt"><a href="#控制起止颜色-lt-color-stop-gt" class="headerlink" title="控制起止颜色 &lt;color-stop&gt;"></a>控制起止颜色 <code>&lt;color-stop&gt;</code></h3><p>起止颜色不仅仅是值两个颜色值，还包括颜色的长度。它的赋值语法是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;color|stop&gt; [ &lt;percentage&gt; | &lt;length&gt; ]</span><br></pre></td></tr></table></figure>
+
+<p>如何理解 <strong>“颜色的长度”</strong> 呢？借用一下<a href="https://www.zhangxinxu.com/wordpress/2013/09/%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3css3-gradient%e6%96%9c%e5%90%91%e7%ba%bf%e6%80%a7%e6%b8%90%e5%8f%98/" target="_blank" rel="noopener">张鑫旭前辈一篇博文</a>中的例子：</p>
+<blockquote>
+<p>在一个400*300的 div 上实现一个 (100px, 100px) 到 (200px, 200px) 由红到黄的斜向线性渐变，该如何实现？</p>
+</blockquote>
+<p><img src="%E6%B8%90%E5%8F%981.JPG" alt="线性渐变方向分析图"></p>
+<p>一图胜千言，根据上图分析的步骤是：</p>
+<ol>
+<li>找出渐变方向：连接两个作用点，角度是135deg</li>
+<li>找默认起止点：沿渐变方向画直线穿过元素中心（xy轴垂线交点），在元素渐变方向的两端，画两条渐变线的垂线，交点即<strong>默认起止点</strong></li>
+<li>确定颜色长度：穿过作用点画渐变线垂线，交点与开始点的距离就是长度，求它的值</li>
+</ol>
+<p>$$<br>RedLen = 100*\sqrt{2} = 141<br>$$</p>
+<p>$$<br>YellowLen = 200*\sqrt{2} = 282<br>$$</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:linear-gradient(135deg,red 141px,yellow 282px);</span><br></pre></td></tr></table></figure>
+
+<p>最终的渲染效果：</p>
+<p><img src="demo.JPG" alt="最终的渲染效果"></p>
+<p>下面将沿着从左到右的方向，通过控制颜色数和长度变量，看下各种配置在40*30的元素中如何渲(为了方便表示，r:red，y:yellow，g:green)：</p>
+<style>
+    .block2{width:40px;height:3em;display:inline-block;}
+    .linear2-1{background:linear-gradient(to right,yellow  0px,red  0px);}
+    .linear2-2{background:linear-gradient(to right,yellow  0px,red 20px);}
+    .linear2-3{background:linear-gradient(to right,yellow  0px,red 40px);}
+    .linear2-4{background:linear-gradient(to right,yellow 10px,red  0px);}
+    .linear2-5{background:linear-gradient(to right,yellow 10px,red 20px);}
+    .linear2-6{background:linear-gradient(to right,yellow 20px,red 20px);}
+    .linear2-7{background:linear-gradient(to right,yellow 20px,red 40px);}
+    .linear2-8{background:linear-gradient(to right,yellow 40px,red 40px);}
+    .linear2-9{background:linear-gradient(to right,yellow 40px,red 0px);}
+    .linear2-10{background:linear-gradient(to right,yellow  0px,red  0px,green  0px);}
+    .linear2-11{background:linear-gradient(to right,yellow  0px,red 20px,green 30px);}
+    .linear2-12{background:linear-gradient(to right,yellow 10px,red  0px,green 30px);}
+    .linear2-13{background:linear-gradient(to right,yellow 10px,red 10px,green 30px);}
+    .linear2-14{background:linear-gradient(to right,yellow 10px,red 20px,green 30px);}
+    .linear2-15{background:linear-gradient(to right,yellow 10px,red 30px,green 30px);}
+    .linear2-16{background:linear-gradient(to right,yellow 30px,red 20px,green 30px);}
+    .linear2-17{background:linear-gradient(to right,yellow 20px,red 20px,green 20px);}
+    .linear2-18{background:linear-gradient(to right,yellow 30px,red 30px,green 30px);}
+    .linear2-31{background:linear-gradient(to right,yellow -10px,red 40px);}
+    .linear2-32{background:linear-gradient(to right,yellow -40px,red 40px);}
+    .linear2-33{background:linear-gradient(to right,yellow  0px,red 50px);}
+    .linear2-34{background:linear-gradient(to right,yellow  0px,red 80px);}
+    .linear2-35{background:linear-gradient(to right,yellow 20%, red 30%, red 45%, green 55%, green 70%, blue 80% );}
+    .linear2-36{background:linear-gradient(to right,yellow 20%, red 30% 45%, green 55% 70%, blue 80%);}
+    .linear2-37{background:linear-gradient(to right,yellow 25%, red 25%, red 50%, green 50%, green 75%, blue 75%);}
+    .linear2-38{background:linear-gradient(to right, yellow 25%, red 25% 50%, green 50% 75%, blue 75%);}
+</style>
+
+<table>
+<thead>
+<tr>
+<th align="center">两个颜色</th>
+<th align="center">效果</th>
+<th align="center">三个颜色</th>
+<th align="center">效果</th>
+<th align="center">奇怪设置</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">y   0px, r 0px</td>
+<td align="center"><div class="block2 linear2-1"></div></td>
+<td align="center">y  0px, r  0px, g  0px</td>
+<td align="center"><div class="block2 linear2-10"></div></td>
+<td align="center">y  -10px, r 40px</td>
+<td align="center"><div class="block2 linear2-31"></div></td>
+</tr>
+<tr>
+<td align="center">y   0px, r 20px</td>
+<td align="center"><div class="block2 linear2-2"></div></td>
+<td align="center">y  0px, r  20px, g 30px</td>
+<td align="center"><div class="block2 linear2-11"></div></td>
+<td align="center">y  -40px, r 40px</td>
+<td align="center"><div class="block2 linear2-32"></div></td>
+</tr>
+<tr>
+<td align="center">y   0px, r 40px</td>
+<td align="center"><div class="block2 linear2-3"></div></td>
+<td align="center">y 10px, r  0px, g 30px</td>
+<td align="center"><div class="block2 linear2-12"></div></td>
+<td align="center">y    0px, r 50px</td>
+<td align="center"><div class="block2 linear2-33"></div></td>
+</tr>
+<tr>
+<td align="center">y  10px, r  0px</td>
+<td align="center"><div class="block2 linear2-4"></div></td>
+<td align="center">y 10px, r 10px, g 30px</td>
+<td align="center"><div class="block2 linear2-13"></div></td>
+<td align="center">y    0px, r 80px</td>
+<td align="center"><div class="block2 linear2-34"></div></td>
+</tr>
+<tr>
+<td align="center">y  10px, r 20px</td>
+<td align="center"><div class="block2 linear2-5"></div></td>
+<td align="center">y 10px, r 20px, g 30px</td>
+<td align="center"><div class="block2 linear2-14"></div></td>
+<td align="center">y 20%, r 30%, r 45%, g 55%, g 70%, b 80%</td>
+<td align="center"><div class="block2 linear2-35"></div></td>
+</tr>
+<tr>
+<td align="center">y  20px, r 20px</td>
+<td align="center"><div class="block2 linear2-6"></div></td>
+<td align="center">y 10px, r 30px, g 30px</td>
+<td align="center"><div class="block2 linear2-15"></div></td>
+<td align="center">r 30% 45%, g 55% 70%, b 80%</td>
+<td align="center"><div class="block2 linear2-36"></div></td>
+</tr>
+<tr>
+<td align="center">y  20px, r 40px</td>
+<td align="center"><div class="block2 linear2-7"></div></td>
+<td align="center">y 30px, r 20px, g 30px</td>
+<td align="center"><div class="block2 linear2-16"></div></td>
+<td align="center">y 25%, r 25%, r 50%, g 50%, g 75%, b 75%</td>
+<td align="center"><div class="block2 linear2-37"></div></td>
+</tr>
+<tr>
+<td align="center">y  40px, r 40px</td>
+<td align="center"><div class="block2 linear2-8"></div></td>
+<td align="center">y 20px, r 20px, g 20px</td>
+<td align="center"><div class="block2 linear2-17"></div></td>
+<td align="center">y 25%, r 25% 50%, g 50% 75%, b 75%</td>
+<td align="center"><div class="block2 linear2-38"></div></td>
+</tr>
+<tr>
+<td align="center">y  40px, r  0px</td>
+<td align="center"><div class="block2 linear2-9"></div></td>
+<td align="center">y 30px, r 30px, g 30px</td>
+<td align="center"><div class="block2 linear2-18"></div></td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>由上表总结就是：</p>
+<ol>
+<li>后设颜色长度不能少于前一个颜色长度</li>
+<li>下一个颜色会覆盖前一个颜色</li>
+<li>两个不同颜色间存在距离才能看出渐变效果，否则就是拼接效果</li>
+<li>起止点可以设置超过范围的值</li>
+</ol>
+<p>除了设置颜色长度，还可通过设置两个颜色的过渡中心点位置来控制渐变。看看两者的不同：</p>
+<p>设置颜色长度:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:linear-gradient(to right,red 0px,yellow 400px);</span><br></pre></td></tr></table></figure>
+
+<div style="width:50%;height:100px;background-image:linear-gradient(to right,red 0px,yellow 400px);"></div>
+
+<p>设置中心点:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:linear-gradient(to right,red,200px,yellow);</span><br></pre></td></tr></table></figure>
+
+<div style="width:50%;height:100px;background-image:linear-gradient(to right,red,200px,yellow);"></div>
+
+<p>来个复杂的,默认情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:linear-gradient(to right,red,yellow,green,blue);</span><br></pre></td></tr></table></figure>
+
+<div style="width:50%;height:100px;background-image:linear-gradient(to right,red,yellow,green,blue);"></div>
+
+<p>设置颜色长度：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:linear-gradient(to right,red 0px,yellow 133px, green 266px,blue 400px);</span><br></pre></td></tr></table></figure>
+
+<div style="width:50%;height:100px;background-image:linear-gradient(to right,red 0px,yellow 133px, green 266px,blue 400px);"></div>
+
+<p>设置中心点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:linear-gradient(to right,red,67px,yellow,200px,green,333px,blue);</span><br></pre></td></tr></table></figure>
+
+<div style="width:50%;height:100px;background-image:linear-gradient(to right,red,67px,yellow,200px,green,333px,blue);"></div>
+
+<h3 id="重复渐变"><a href="#重复渐变" class="headerlink" title="重复渐变"></a>重复渐变</h3><p>当渐变效果是重复性的，就可以用另外一个函数 <code>repeating-linear-gradient</code>来渲染。它的语法规则是这样子的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repeating-linear-gradient(  [ &lt;angle&gt; | to &lt;side-or-corner&gt; ,]? &lt;color-stop&gt; [, &lt;color-stop&gt;]+ )</span><br></pre></td></tr></table></figure>
+
+<p>定义时，只需要设置最小精度过渡样式，重复部分交给渲染引擎。另外，为了更好的过渡效果，第一个和最后一个颜色应该相等。下表中会用变量替换指令的 <code>red,yellow</code>，感受下效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background:repeating-linear-gradient(to right,red,yellow);</span><br></pre></td></tr></table></figure>
+
+<style>
+    .block3{width:400px;height:50px;display:inline-block;}
+    .linear3-1{background:repeating-linear-gradient(to right,red,yellow);}
+    .linear3-2{background:repeating-linear-gradient(to right,red 0px,yellow 400px);}
+    .linear3-3{background:repeating-linear-gradient(to right,red, red 50px, yellow 100px);}
+    .linear3-4{background:repeating-linear-gradient(to right,red,red 50px, yellow 50px,yellow 100px);}
+    .linear3-5{background:repeating-linear-gradient(to right,red,red 30px, yellow 30px,yellow 60px);}
+    .linear3-6{background:repeating-linear-gradient(to right,red,yellow 25px, red 50px);}
+</style>
+
+<table>
+<thead>
+<tr>
+<th align="center">变量</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">red,yellow</td>
+<td align="center"><div class="block3 linear3-1"></div></td>
+</tr>
+<tr>
+<td align="center">r 0px,y 40px</td>
+<td align="center"><div class="block3 linear3-2"></div></td>
+</tr>
+<tr>
+<td align="center">r,r 50px,y 100px</td>
+<td align="center"><div class="block3 linear3-3"></div></td>
+</tr>
+<tr>
+<td align="center">r,r 50px,y 50px,y 100px</td>
+<td align="center"><div class="block3 linear3-4"></div></td>
+</tr>
+<tr>
+<td align="center">r,r 3px,y 30px,y 60px</td>
+<td align="center"><div class="block3 linear3-5"></div></td>
+</tr>
+<tr>
+<td align="center">r,y 25px,r 50px</td>
+<td align="center"><div class="block3 linear3-6"></div></td>
+</tr>
+</tbody></table>
+<p>重复渐变可以做出多规律性的效果：</p>
+<style>
+    .linear3-7{background:repeating-linear-gradient(180deg, #8ac6d1,#8ac6d1 7px, #fbd1b7 7px,#fbd1b7 9px);}
+    .linear3-8{background:repeating-linear-gradient(135deg, black,black 15px, white 15px,white 30px);}
+</style>
+
+<table>
+<thead>
+<tr>
+<th align="center">方向</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">180deg</td>
+<td align="center"><div class="block3 linear3-7"></div></td>
+</tr>
+<tr>
+<td align="center">135deg</td>
+<td align="center"><div class="block3 linear3-8"></div></td>
+</tr>
+</tbody></table>
+<h3 id="效果叠加"><a href="#效果叠加" class="headerlink" title="效果叠加"></a>效果叠加</h3><p>渐变效果是可以叠加的，并且渐变颜色可以选择 <code>transparent</code>。</p>
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>渐变效果在 <code>没有-&gt;提案-&gt;各浏览器带前缀实现-&gt;标准化-&gt;去前缀</code> 过程中有所变迁，不同浏览器是否带前缀和是否带 <code>to</code> 关键词的实现混杂， <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">MDN</a> 最终给出下面跨浏览器兼容实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.grad &#123; </span><br><span class="line">  background-color: white; /* 不支持渐变的浏览器回退方案 */</span><br><span class="line">  background-image: -webkit-linear-gradient(top, black, white); /* 支持 Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */</span><br><span class="line">  background-image:    -moz-linear-gradient(top,black, white); /* 支持 Firefox (3.6 to 15) */</span><br><span class="line">  background-image:      -o-linear-gradient(top,black, white); /* 支持旧 Opera (11.1 to 12.0) */ </span><br><span class="line">  background-image:         linear-gradient(to bottom,black, white); /* 标准语法; 需要最新版本 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+   
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag">
+              <i class="fa fa-tag"></i>
+              CSS
+            </a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/11/各类资源网站集/" rel="next" title="各类资源网站集">
+                <i class="fa fa-chevron-left"></i> 各类资源网站集
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+        
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://avatars3.githubusercontent.com/u/20348638?s=460&v=4" alt="Shally Fu">
+            
+              <p class="site-author-name" itemprop="name">Shally Fu</p>
+              <p class="site-description motion-element" itemprop="description">There is no such thing as "too late" in life.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fujiayi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:fujiayishally@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhangxinxu.com" title="张鑫旭博客" target="_blank">张鑫旭博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://fex.baidu.com" title="百度FEX" target="_blank">百度FEX</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://taobaofed.org" title="淘宝FED" target="_blank">淘宝FED</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://aotu.io/index.html" title="凹凸实验室" target="_blank">凹凸实验室</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com" title="AlloyTeam" target="_blank">AlloyTeam</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dopro.io" title="DeepOcean" target="_blank">DeepOcean</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性渐变"><span class="nav-number">1.</span> <span class="nav-text">线性渐变</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制渐变方向"><span class="nav-number">1.1.</span> <span class="nav-text">控制渐变方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制起止颜色-lt-color-stop-gt"><span class="nav-number">1.2.</span> <span class="nav-text">控制起止颜色 &lt;color-stop&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重复渐变"><span class="nav-number">1.3.</span> <span class="nav-text">重复渐变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果叠加"><span class="nav-number">1.4.</span> <span class="nav-text">效果叠加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-number">1.5.</span> <span class="nav-text">兼容性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">Copyright &nbsp; &copy;
+2018-<span itemprop="copyrightYear">2019</span>
+
+  <span class="with-love">
+    <i class="fa fa-angellist"></i>
+  </span>
+
+  <span class="author" itemprop="copyrightHolder">Shally.All Rights Reserved.</span>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66451576";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'sC4UelGGN6k1rWk574RYyUK4-gzGzoHsz',
+        appKey: 'eVMM05gN276WHDJzf7GpHetn',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("sC4UelGGN6k1rWk574RYyUK4-gzGzoHsz", "eVMM05gN276WHDJzf7GpHetn");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
