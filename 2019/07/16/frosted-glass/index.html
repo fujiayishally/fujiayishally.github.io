@@ -154,7 +154,7 @@
 <meta property="og:image" content="https://fujiayishally.github.io/2019/07/16/frosted-glass/3-7.JPG">
 <meta property="og:image" content="https://fujiayishally.github.io/2019/07/16/frosted-glass/3-8.JPG">
 <meta property="og:image" content="https://fujiayishally.github.io/2019/07/16/frosted-glass/scroll.gif">
-<meta property="og:updated_time" content="2019-07-19T06:23:07.643Z">
+<meta property="og:updated_time" content="2019-07-19T06:25:15.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="frosted glass 毛玻璃效果">
 <meta name="twitter:description" content="🤔问题当背景图太过花哨，使得内容层的文字难以阅读时，应该怎么办呢？  我的想法是常规地添加个透明背景：    黑底白字 白底黑子        说实话，加了背景色之后虽然能看清文字了，可大大一块颜色不怎么好看呀。有什么办法能让文字和背景图更好地融合呢？毛玻璃可能是个不错的选择。 什么是毛玻璃效果？看看QQ音乐歌词的界面就知道了。歌词能很清楚地被看到，因为文本覆盖的图片区域被大大地模糊了，人在阅读">
@@ -401,7 +401,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-19T14:23:07+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-19T14:25:15+08:00">
                 2019-07-19
               </time>
             
@@ -540,7 +540,7 @@
 <p>有进展了！伪元素渲染在背景元素之前。接下来的问题：一是伪元素的模糊效果出圈了。二是边缘处模糊效果减弱，透出了背景图：</p>
 <p><img src="3-7.JPG" alt="设置父子层叠上下文"></p>
 <p>前者简单，一句 <code>overflow:hidden</code> 就能解决。后者是因为模糊效果的削减幅度是模糊半径的长度，只要伪元素再向外扩展至少<code>20px</code>即可：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    margin:-50px;//保险起见，设置一个比20px更大的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    margin:-50px;//保险起见，设置一个比20px更大的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>去掉蓝色背景，最终的渲染效果：</p>
 <p><img src="3-8.JPG" alt="设置父子层叠上下文"></p>
@@ -600,8 +600,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/16/CSS-clip-path/" rel="prev" title="CSS clip-path">
-                CSS clip-path <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/16/CSS-clip-path/" rel="prev" title="CSS clip-path 剪切属性">
+                CSS clip-path 剪切属性 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
