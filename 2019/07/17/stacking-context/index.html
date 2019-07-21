@@ -125,7 +125,7 @@
 
 
 
-  <meta name="keywords" content="Shally,前端,傅嘉怡">
+  <meta name="keywords" content="CSS,">
 
 
 
@@ -136,18 +136,20 @@
 
 
 
-<meta name="description" content="xxx🤔问题💡思路🎉解决方案🚧注意🌵最后 这是 本例代码以供参考 本问题摘自xxx，致谢 点📖 查看更多xxx，致敬">
-<meta name="keywords" content="前端">
+<meta name="description" content="📚 概念在CSS中，每个盒子的位置其实都是三维的。除了平面的X轴和Y轴之外，盒子还会沿着“Z轴”（垂直屏幕靠近用户方向）一个一个地往上堆叠，亦即产生了视觉上的重叠效果。在深入理解前，应该先明确两个概念：层叠上下文(stacking context)和 层叠等级(stack level)。  这有个不太正确的类比，但也许能帮助你理解它们：层叠上下文就像JS中的执行上下文，内部维护了一些函数（元素盒">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="stacking context">
+<meta property="og:title" content="stacking context 层叠上下文">
 <meta property="og:url" content="https://fujiayishally.github.io/2019/07/17/stacking-context/index.html">
 <meta property="og:site_name" content="Shally&#39;s Blog">
-<meta property="og:description" content="xxx🤔问题💡思路🎉解决方案🚧注意🌵最后 这是 本例代码以供参考 本问题摘自xxx，致谢 点📖 查看更多xxx，致敬">
+<meta property="og:description" content="📚 概念在CSS中，每个盒子的位置其实都是三维的。除了平面的X轴和Y轴之外，盒子还会沿着“Z轴”（垂直屏幕靠近用户方向）一个一个地往上堆叠，亦即产生了视觉上的重叠效果。在深入理解前，应该先明确两个概念：层叠上下文(stacking context)和 层叠等级(stack level)。  这有个不太正确的类比，但也许能帮助你理解它们：层叠上下文就像JS中的执行上下文，内部维护了一些函数（元素盒">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-17T15:56:33.034Z">
+<meta property="og:image" content="https://fujiayishally.github.io/2019/07/17/stacking-context/1.JPG">
+<meta property="og:updated_time" content="2019-07-21T14:51:41.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="stacking context">
-<meta name="twitter:description" content="xxx🤔问题💡思路🎉解决方案🚧注意🌵最后 这是 本例代码以供参考 本问题摘自xxx，致谢 点📖 查看更多xxx，致敬">
+<meta name="twitter:title" content="stacking context 层叠上下文">
+<meta name="twitter:description" content="📚 概念在CSS中，每个盒子的位置其实都是三维的。除了平面的X轴和Y轴之外，盒子还会沿着“Z轴”（垂直屏幕靠近用户方向）一个一个地往上堆叠，亦即产生了视觉上的重叠效果。在深入理解前，应该先明确两个概念：层叠上下文(stacking context)和 层叠等级(stack level)。  这有个不太正确的类比，但也许能帮助你理解它们：层叠上下文就像JS中的执行上下文，内部维护了一些函数（元素盒">
+<meta name="twitter:image" content="https://fujiayishally.github.io/2019/07/17/stacking-context/1.JPG">
 
 
 
@@ -183,7 +185,7 @@
 
 
 
-  <title>stacking context | Shally's Blog</title>
+  <title>stacking context 层叠上下文 | Shally's Blog</title>
   
 
 
@@ -362,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">stacking context</h1>
+          <h1 class="post-title" itemprop="name headline">stacking context 层叠上下文</h1>
         
 
         <div class="post-meta">
@@ -390,12 +392,45 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-17T23:56:33+08:00">
-                2019-07-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-21T22:51:41+08:00">
+                2019-07-21
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS相关/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS相关</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -415,7 +450,7 @@
 
           
           
-             <span id="/2019/07/17/stacking-context/" class="leancloud_visitors" data-flag-title="stacking context">
+             <span id="/2019/07/17/stacking-context/" class="leancloud_visitors" data-flag-title="stacking context 层叠上下文">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,10 +479,21 @@
       <!--自定义，首页文章列表-->
       
         <div class="post_article"> 
-          <h1 id="xxx"><a href="#xxx" class="headerlink" title="xxx"></a>xxx</h1><h2 id="🤔问题"><a href="#🤔问题" class="headerlink" title="🤔问题"></a>🤔问题</h2><h2 id="💡思路"><a href="#💡思路" class="headerlink" title="💡思路"></a>💡思路</h2><h2 id="🎉解决方案"><a href="#🎉解决方案" class="headerlink" title="🎉解决方案"></a>🎉解决方案</h2><h2 id="🚧注意"><a href="#🚧注意" class="headerlink" title="🚧注意"></a>🚧注意</h2><h2 id="🌵最后"><a href="#🌵最后" class="headerlink" title="🌵最后"></a>🌵最后</h2><ul>
-<li>这是 <a href="xxx">本例代码</a>以供参考</li>
-<li>本问题摘自xxx，致谢</li>
-<li>点<a href="xxx">📖</a> 查看更多xxx，致敬</li>
+          <h2 id="📚-概念"><a href="#📚-概念" class="headerlink" title="📚 概念"></a>📚 概念</h2><p>在CSS中，每个盒子的位置其实都是三维的。除了平面的X轴和Y轴之外，盒子还会沿着“Z轴”（垂直屏幕靠近用户方向）一个一个地往上堆叠，亦即产生了视觉上的重叠效果。在深入理解前，应该先明确两个概念：<strong>层叠上下文(stacking context)</strong>和 <strong>层叠等级(stack level)</strong>。</p>
+<p><img src="1.JPG" alt="层叠上下文示意图"></p>
+<p>这有个不太正确的类比，但也许能帮助你理解它们：层叠上下文就像JS中的执行上下文，内部维护了一些函数（元素盒子），不同函数在调用过程中形成了一个调用栈。元素盒子则是在定义时根据不同的定义方式获得了各自的层叠等级，它们按照层叠等级的高低也形成了一个栈，栈顶离用户最近。 </p>
+<h2 id="👨‍⚖️官方解析"><a href="#👨‍⚖️官方解析" class="headerlink" title="👨‍⚖️官方解析"></a>👨‍⚖️官方解析</h2><p>标准文档中给出了更准确的描述，我对其进行了如下整理：</p>
+<h3 id="针对当前层叠上下文"><a href="#针对当前层叠上下文" class="headerlink" title="针对当前层叠上下文"></a>针对当前层叠上下文</h3><ul>
+<li>每个盒子都属于一个层叠上下文，这里把某个盒子当前所属的层叠上下文，称为<strong>当前层叠上下文</strong>。</li>
+<li>在当前层叠上下文中，每个盒子都有一个层叠等级（等级可以为负），层叠等级按大小排列形成了第三个轴——“Z轴”，垂直屏幕向用户延申增大。</li>
+<li>同级的不一定是兄弟盒子，也可以是父子盒子；兄弟盒子也不一定等级相等；当等级相同时按 dom 树顺序从下到上堆叠。</li>
+</ul>
+<h3 id="针对层叠上下文整体概念"><a href="#针对层叠上下文整体概念" class="headerlink" title="针对层叠上下文整体概念"></a>针对层叠上下文整体概念</h3><ul>
+<li>层叠上下文分两种，一种是根元素<code>&lt;body&gt;</code>自动创建<strong>根层叠上下文(root stacking context)</strong>，另一种是其他元素创建的<strong>本地层叠上下文( local stacking contexts)</strong>。</li>
+<li>对于定位框，z-index属性指定：</li>
+</ul>
+<h3 id="针对层叠等级"><a href="#针对层叠等级" class="headerlink" title="针对层叠等级"></a>针对层叠等级</h3><h2 id="🌵最后"><a href="#🌵最后" class="headerlink" title="🌵最后"></a>🌵最后</h2><ul>
+<li>这里<a href="https://www.w3.org/TR/css-position-3/#stacking-context" target="_blank" rel="noopener">📖</a> 是层叠上下文的标准文档，致敬</li>
 </ul>
 
         </div>
@@ -465,6 +511,15 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag">
+              <i class="fa fa-tag"></i>
+              CSS
+            </a>
+          
+        </div>
       
 
       
@@ -582,7 +637,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -676,7 +731,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#xxx"><span class="nav-number">1.</span> <span class="nav-text">xxx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🤔问题"><span class="nav-number">1.1.</span> <span class="nav-text">🤔问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#💡思路"><span class="nav-number">1.2.</span> <span class="nav-text">💡思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🎉解决方案"><span class="nav-number">1.3.</span> <span class="nav-text">🎉解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🚧注意"><span class="nav-number">1.4.</span> <span class="nav-text">🚧注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🌵最后"><span class="nav-number">1.5.</span> <span class="nav-text">🌵最后</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#📚-概念"><span class="nav-number">1.</span> <span class="nav-text">📚 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#👨‍⚖️官方解析"><span class="nav-number">2.</span> <span class="nav-text">👨‍⚖️官方解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#针对当前层叠上下文"><span class="nav-number">2.1.</span> <span class="nav-text">针对当前层叠上下文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对层叠上下文整体概念"><span class="nav-number">2.2.</span> <span class="nav-text">针对层叠上下文整体概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对层叠等级"><span class="nav-number">2.3.</span> <span class="nav-text">针对层叠等级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🌵最后"><span class="nav-number">3.</span> <span class="nav-text">🌵最后</span></a></li></ol></div>
             
 
           </div>
