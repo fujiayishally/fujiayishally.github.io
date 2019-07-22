@@ -146,7 +146,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://fujiayishally.github.io/2019/07/11/CSS-gradient/gradient.JPG">
 <meta property="og:image" content="https://fujiayishally.github.io/2019/07/11/CSS-gradient/demo.JPG">
-<meta property="og:updated_time" content="2019-07-19T12:57:03.387Z">
+<meta property="og:updated_time" content="2019-07-22T10:52:38.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS:linear-gradient 线性渐变">
 <meta name="twitter:description" content="渐变是 image 的一种类型（gradient）,它分三种：线性、径向、圆锥。本文针对这些知识点进行了梳理。">
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-19T20:57:03+08:00">
-                2019-07-19
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-22T18:52:38+08:00">
+                2019-07-22
               </time>
             
           </span>
@@ -480,11 +480,11 @@
       <!--自定义，首页文章列表-->
       
         <div class="post_article"> 
-          <h2 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h2><p>CSS3线性渐变的标准写法：</p>
+          <h2 id="线性渐变-linear-gradient"><a href="#线性渐变-linear-gradient" class="headerlink" title="线性渐变 linear-gradient"></a>线性渐变 linear-gradient</h2><h3 id="📚语法定义"><a href="#📚语法定义" class="headerlink" title="📚语法定义"></a>📚语法定义</h3><p>CSS3线性渐变的标准写法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image: linear-gradient([&lt;angle&gt; | &lt;side-or-corner&gt;,]? &lt;color-stop&gt; [,&lt;color-stop&gt;]+ );</span><br></pre></td></tr></table></figure>
 
 <p>可以看出，线性渐变效果由方向（<code>&lt;angle&gt; | &lt;side-or-corner&gt;</code>可选）及起止色（<code>color-stop</code>至少一对）控制。下面将通过控制变量法，分别对这两者进行分析。</p>
-<h3 id="控制渐变方向"><a href="#控制渐变方向" class="headerlink" title="控制渐变方向"></a>控制渐变方向</h3><p>要明白渐变方向是怎样控制的，首先要明确三个规定：</p>
+<h3 id="🚥控制渐变方向"><a href="#🚥控制渐变方向" class="headerlink" title="🚥控制渐变方向"></a>🚥控制渐变方向</h3><p>要明白渐变方向是怎样控制的，首先要明确三个规定：</p>
 <ol>
 <li>规定 <code>0deg</code> 时方向为<strong>上</strong></li>
 <li>规定 <code>0deg</code> 到 <code>180deg</code> 是顺时针方向</li>
@@ -585,7 +585,7 @@
 </tr>
 </tbody></table>
 <p>方向关键词的制订是有一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">演变历史的</a>。</p>
-<h3 id="控制起止颜色-lt-color-stop-gt"><a href="#控制起止颜色-lt-color-stop-gt" class="headerlink" title="控制起止颜色 &lt;color-stop&gt;"></a>控制起止颜色 <code>&lt;color-stop&gt;</code></h3><p>起止颜色不仅仅是值两个颜色值，还包括颜色的长度。它的赋值语法是：</p>
+<h3 id="🚥控制起止颜色-lt-color-stop-gt"><a href="#🚥控制起止颜色-lt-color-stop-gt" class="headerlink" title="🚥控制起止颜色 &lt;color-stop&gt;"></a>🚥控制起止颜色 <code>&lt;color-stop&gt;</code></h3><p>起止颜色不仅仅是值两个颜色值，还包括颜色的长度。它的赋值语法是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;color|stop&gt; [ &lt;percentage&gt; | &lt;length&gt; ]</span><br></pre></td></tr></table></figure>
 
 <p>如何理解 <strong>“颜色的长度”</strong> 呢？借用一下<a href="https://www.zhangxinxu.com/wordpress/2013/09/%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3css3-gradient%e6%96%9c%e5%90%91%e7%ba%bf%e6%80%a7%e6%b8%90%e5%8f%98/" target="_blank" rel="noopener">张鑫旭前辈一篇博文</a>中的例子：</p>
@@ -771,7 +771,7 @@
 
 <div style="width:50%;height:4em;background-image:linear-gradient(to right, red, 16.67%, yellow, 50%, green, 83.33%, blue);"></div>
 
-<h3 id="重复渐变"><a href="#重复渐变" class="headerlink" title="重复渐变"></a>重复渐变</h3><p>当渐变效果是重复性的，就可以用另外一个函数 <code>repeating-linear-gradient</code>来渲染。它的语法规则是这样子的：</p>
+<h3 id="📚重复渐变语法定义"><a href="#📚重复渐变语法定义" class="headerlink" title="📚重复渐变语法定义"></a>📚重复渐变语法定义</h3><p>当渐变效果是重复性的，就可以用另外一个函数 <code>repeating-linear-gradient</code>来渲染。它的语法规则是这样子的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repeating-linear-gradient(  [ &lt;angle&gt; | to &lt;side-or-corner&gt; ,]? &lt;color-stop&gt; [, &lt;color-stop&gt;]+ )</span><br></pre></td></tr></table></figure>
 
 <p>定义时，只需要设置最小精度过渡样式，重复部分交给渲染引擎。另外，为了更好的过渡效果，第一个和最后一个颜色应该相等。下表中会用变量替换指令的 <code>red,yellow</code>，感受下效果：</p>
@@ -841,10 +841,248 @@
 <td align="center"><div class="block3 linear3-8"></div></td>
 </tr>
 </tbody></table>
-<h3 id="效果叠加"><a href="#效果叠加" class="headerlink" title="效果叠加"></a>效果叠加</h3><p>渐变效果是可以叠加的，并且渐变颜色可以选择 <code>transparent</code>。</p>
-<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>渐变效果在 <code>没有-&gt;提案-&gt;各浏览器带前缀实现-&gt;标准化-&gt;去前缀</code> 过程中有所变迁，不同浏览器是否带前缀和是否带 <code>to</code> 关键词的实现混杂， <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">MDN</a> 最终给出下面跨浏览器兼容实现：</p>
+<p>渐变效果是可以叠加的，并且渐变颜色可以选择 <code>transparent</code>。</p>
+<h3 id="💦兼容性"><a href="#💦兼容性" class="headerlink" title="💦兼容性"></a>💦兼容性</h3><p>渐变效果在 <code>没有-&gt;提案-&gt;各浏览器带前缀实现-&gt;标准化-&gt;去前缀</code> 过程中有所变迁，不同浏览器是否带前缀和是否带 <code>to</code> 关键词的实现混杂， <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">MDN</a> 最终给出下面跨浏览器兼容实现：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.grad &#123; </span><br><span class="line">  background-color: white; /* 不支持渐变的浏览器回退方案 */</span><br><span class="line">  background-image: -webkit-linear-gradient(top, black, white); /* 支持 Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */</span><br><span class="line">  background-image:    -moz-linear-gradient(top,black, white); /* 支持 Firefox (3.6 to 15) */</span><br><span class="line">  background-image:      -o-linear-gradient(top,black, white); /* 支持旧 Opera (11.1 to 12.0) */ </span><br><span class="line">  background-image:         linear-gradient(to bottom,black, white); /* 标准语法; 需要最新版本 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="径向渐变-radial-gradient"><a href="#径向渐变-radial-gradient" class="headerlink" title="径向渐变 radial-gradient"></a>径向渐变 radial-gradient</h2><h3 id="📚语法定义-1"><a href="#📚语法定义-1" class="headerlink" title="📚语法定义"></a>📚语法定义</h3><p>径向渐变(Radial gradients)由其中心点、边缘形状及位置、色值结束点（color stops）定义而成。 与<code>linera-gradient()</code>一样，<code>radial-gradient()</code> 函数也创建一个<code>&lt;image&gt;</code>。它的具体语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">radial-gradient( [ circle || &lt;length&gt; ] [ at &lt;position&gt; ]? ,</span><br><span class="line">| [ ellipse || [&lt;length&gt; | &lt;percentage&gt; ]&#123;2&#125;] [ at &lt;position&gt; ]? ,</span><br><span class="line">| [ [ circle | ellipse ] || &lt;extent-keyword&gt; ] [ at &lt;position&gt; ]? ,</span><br><span class="line">| at &lt;position&gt; ,</span><br><span class="line">&lt;color-stop&gt; [ , &lt;color-stop&gt; ]+ )</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<ul>
+<li>渐变形状是圆形或椭圆形，默认值为椭圆。若为圆形，可指定一个半径长度(只能是长度值)；若为椭圆形，可指定两个对称轴半径长度（可以是长度值或百分比）。</li>
+<li><code>&lt;position&gt;</code> 对称中心，如缺省，默认为中心点。</li>
+<li><code>&lt;extent-keyword&gt;</code>用于描述边缘轮廓的具体位置，它的关键字及介绍如下：<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">closest-side</td>
+<td align="left">渐变的边缘形状与容器距离渐变中心点最近的一边相切（圆形）或者至少与距离渐变中心点最近的垂直和水平边相切（椭圆）</td>
+</tr>
+<tr>
+<td align="center">closest-corner</td>
+<td align="left">渐变的边缘形状与容器距离渐变中心点最近的一个角相交</td>
+</tr>
+<tr>
+<td align="center">farthest-side</td>
+<td align="left">与closest-side相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）</td>
+</tr>
+<tr>
+<td align="center">farthest-corner</td>
+<td align="left">渐变的边缘形状与容器距离渐变中心点最远的一个角相交</td>
+</tr>
+</tbody></table>
+</li>
+<li><code>&lt;color-stop&gt;</code>包含一个<code>&lt;color&gt;</code>值加上可选的位置值。百分比值0%，或者长度值0，表示渐变中心点；百分比值100%表示渐变射线与边缘形状相交的点。</li>
+</ul>
+<p>在一个3em*3em的正方形中，渲染圆形径向渐变。下表将分别控制半径长度及圆心位置，看看不同条件下的渲染效果：</p>
+<style>
+    .gbox{width:3em;height:3em;display:inline-block;}
+    .g_circle1{background-image: radial-gradient(circle, white,black);}
+    .g_circle2{background-image: radial-gradient(circle at 0% 50%, white,black);}
+    .g_circle3{background-image: radial-gradient(circle at 0% 100%, white,black);}
+    .g_circle4{background-image: radial-gradient(circle at 50% 0%, white,black);}
+    .g_circle5{background-image: radial-gradient(circle at 100% 0%, white,black);}
+    .g_circle11{background-image: radial-gradient(circle 0px, white,black);}
+    .g_circle12{background-image: radial-gradient(circle 1px, white,black);}
+    .g_circle13{background-image: radial-gradient(circle 1em, white,black);}
+    .g_circle14{background-image: radial-gradient(circle 1.5em, white,black);}
+    .g_circle15{background-image: radial-gradient(circle 3em, white,black);}
+</style>
+<table>
+<thead>
+<tr>
+<th align="center">渐变形状</th>
+<th align="center">默认半径时中心坐标</th>
+<th align="center">效果</th>
+<th align="center">默认中心时，半径长度</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">circle</td>
+<td align="center">默认at 50%,50%</td>
+<td align="center"><div class="gbox g_circle1"></div></td>
+<td align="center">0px</td>
+<td align="center"><div class="gbox g_circle11"></div></td>
+</tr>
+<tr>
+<td align="center">circle</td>
+<td align="center">at 0% 50%</td>
+<td align="center"><div class="gbox g_circle2"></div></td>
+<td align="center">1px</td>
+<td align="center"><div class="gbox g_circle12"></div></td>
+</tr>
+<tr>
+<td align="center">circle</td>
+<td align="center">at 0% 100%</td>
+<td align="center"><div class="gbox g_circle3"></div></td>
+<td align="center">1em</td>
+<td align="center"><div class="gbox g_circle13"></div></td>
+</tr>
+<tr>
+<td align="center">circle</td>
+<td align="center">at 50% 0%</td>
+<td align="center"><div class="gbox g_circle4"></div></td>
+<td align="center">1.5em</td>
+<td align="center"><div class="gbox g_circle14"></div></td>
+</tr>
+<tr>
+<td align="center">circle</td>
+<td align="center">at 100% 0%</td>
+<td align="center"><div class="gbox g_circle5"></div></td>
+<td align="center">3em</td>
+<td align="center"><div class="gbox g_circle15"></div></td>
+</tr>
+</tbody></table>
+<p>在一个3em*3em的正方形中，渲染椭圆径向渐变。下表将分别控制半径长度及对称轴坐标，看看不同条件下的渲染效果：</p>
+<style>
+    .gbox{width:3em;height:3em;display:inline-block;}
+    .g_ellipse1{background-image: radial-gradient(ellipse,white,black);}
+    .g_ellipse2{background-image: radial-gradient(ellipse at 0% 50%, white,black);}
+    .g_ellipse3{background-image: radial-gradient(ellipse at 0% 100%, white,black);}
+    .g_ellipse4{background-image: radial-gradient(ellipse at 50% 0%, white,black);}
+    .g_ellipse5{background-image: radial-gradient(ellipse at 100% 0%, white,black);}
+    .g_ellipse11{background-image: radial-gradient(ellipse 0px 0px, white,black);}
+    .g_ellipse12{background-image: radial-gradient(ellipse 1em 1em, white,black);}
+    .g_ellipse13{background-image: radial-gradient(ellipse 1em 1.5em, white,black);}
+    .g_ellipse14{background-image: radial-gradient(ellipse 1.5em 1em, white,black);}
+    .g_ellipse15{background-image: radial-gradient(ellipse 3em 0em, white,black);}
+</style>
+<table>
+<thead>
+<tr>
+<th align="center">渐变形状</th>
+<th align="center">默认半径时中心坐标</th>
+<th align="center">效果</th>
+<th align="center">默认中心时，半径长度</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ellipse</td>
+<td align="center">默认</td>
+<td align="center"><div class="gbox g_ellipse1"></div></td>
+<td align="center">0px 0px</td>
+<td align="center"><div class="gbox g_ellipse11"></div></td>
+</tr>
+<tr>
+<td align="center">ellipse</td>
+<td align="center">at 0% 50%</td>
+<td align="center"><div class="gbox g_ellipse2"></div></td>
+<td align="center">1em 1em</td>
+<td align="center"><div class="gbox g_ellipse12"></div></td>
+</tr>
+<tr>
+<td align="center">ellipse</td>
+<td align="center">at 0% 100%</td>
+<td align="center"><div class="gbox g_ellipse3"></div></td>
+<td align="center">1em 1.5em</td>
+<td align="center"><div class="gbox g_ellipse13"></div></td>
+</tr>
+<tr>
+<td align="center">ellipse</td>
+<td align="center">at 50% 0%</td>
+<td align="center"><div class="gbox g_ellipse4"></div></td>
+<td align="center">1.5em 1em</td>
+<td align="center"><div class="gbox g_ellipse14"></div></td>
+</tr>
+<tr>
+<td align="center">ellipse</td>
+<td align="center">at 100% 0%</td>
+<td align="center"><div class="gbox g_ellipse5"></div></td>
+<td align="center">3em 0em</td>
+<td align="center"><div class="gbox g_ellipse15"></div></td>
+</tr>
+</tbody></table>
+<p>在一个4em*3em的正方形中，以(25%,50%)为中心坐标，配合不同的渐变形状，<code>extent-keyword</code>不同表现效果：</p>
+<style>
+    .gbox{width:4em;height:3em;display:inline-block;}
+    .g_extent1{background-image: radial-gradient(circle closest-side at 25% 50%,white,black);}
+    .g_extent2{background-image: radial-gradient(circle closest-corner at 25% 50%,white,black);}
+    .g_extent3{background-image: radial-gradient(circle farthest-side at 25% 50%,white,black);}
+    .g_extent4{background-image: radial-gradient(circle farthest-corner at 25% 50%,white,black);}
+    .g_extent11{background-image: radial-gradient(ellipse closest-side at 25% 50%,white,black);}
+    .g_extent12{background-image: radial-gradient(ellipse closest-corner at 25% 50%,white,black);}
+    .g_extent13{background-image: radial-gradient(ellipse farthest-side at 25% 50%,white,black);}
+    .g_extent14{background-image: radial-gradient(ellipse farthest-corner at 25% 50%,white,black);}
+</style>
+<table>
+<thead>
+<tr>
+<th align="center">extent-keyword</th>
+<th align="center">渐变形状</th>
+<th align="center">效果</th>
+<th align="center">渐变形状</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">closest-side</td>
+<td align="center">circle</td>
+<td align="center"><div class="gbox g_extent1"></div></td>
+<td align="center">ellipse</td>
+<td align="center"><div class="gbox g_extent11"></div></td>
+</tr>
+<tr>
+<td align="center">closest-corner</td>
+<td align="center">circle</td>
+<td align="center"><div class="gbox g_extent2"></div></td>
+<td align="center">ellipse</td>
+<td align="center"><div class="gbox g_extent12"></div></td>
+</tr>
+<tr>
+<td align="center">farthest-side</td>
+<td align="center">circle</td>
+<td align="center"><div class="gbox g_extent3"></div></td>
+<td align="center">ellipse</td>
+<td align="center"><div class="gbox g_extent13"></div></td>
+</tr>
+<tr>
+<td align="center">farthest-corner</td>
+<td align="center">circle</td>
+<td align="center"><div class="gbox g_extent4"></div></td>
+<td align="center">ellipse</td>
+<td align="center"><div class="gbox g_extent14"></div></td>
+</tr>
+</tbody></table>
+<p>radial-gradient 的 <code>&lt;color-stop&gt;</code>的定义与 linear-gradient的相同，就不赘述了。</p>
+<p><code>radial-gradient</code>同样支持逗号赋值。下面是利用径向渐变实现的图案：</p>
+<style>
+    .gshow{width:4em;height:3em;display:inline-block;}
+    .g_temp1{background-image: radial-gradient(circle at 50% 50%,white 49%,black 49%,black calc(49% + 1px),white calc(49% + 1px), white);}
+    .g_temp2{background-image: radial-gradient(16px at 60px 50%, #000000 0%, #000000 14px, rgba(0, 0, 0, 0.3) 18px, rgba(0, 0, 0, 0) 19px);}
+    .g_temp3{background-image: radial-gradient(ellipse farthest-corner at 50% 50%, #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%);}
+    .g_temp4{background-image: radial-gradient(ellipse farthest-corner at 50% 5%, #FFFF80 20%, rgba(204, 153, 153, 0.4) 30%, #E6E6FF 60%);}
+</style>
+<table>
+<thead>
+<tr>
+<th align="center">效果</th>
+<th align="center">代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><div class="gshow g_temp1"></div></td>
+<td align="center"><code>circle at 50% 50%,white 49%,black 49%,black calc(49% + 1px),white calc(49% + 1px), white</code></td>
+</tr>
+<tr>
+<td align="center"><div class="gshow g_temp2"></div></td>
+<td align="center"><code>16px at 60px 50%, #000000 0%, #000000 14px, rgba(0, 0, 0, 0.3) 18px, rgba(0, 0, 0, 0) 19px</code></td>
+</tr>
+<tr>
+<td align="center"><div class="gshow g_temp3"></div></td>
+<td align="center"><code>ellipse farthest-corner at 50% 50%, #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%</code></td>
+</tr>
+<tr>
+<td align="center"><div class="gshow g_temp4"></div></td>
+<td align="center"><code>ellipse farthest-corner at 50% 5%, #FFFF80 20%, rgba(204, 153, 153, 0.4) 30%, #E6E6FF 60%</code></td>
+</tr>
+</tbody></table>
 
         </div>
       
@@ -1081,7 +1319,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性渐变"><span class="nav-number">1.</span> <span class="nav-text">线性渐变</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制渐变方向"><span class="nav-number">1.1.</span> <span class="nav-text">控制渐变方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制起止颜色-lt-color-stop-gt"><span class="nav-number">1.2.</span> <span class="nav-text">控制起止颜色 &lt;color-stop&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重复渐变"><span class="nav-number">1.3.</span> <span class="nav-text">重复渐变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果叠加"><span class="nav-number">1.4.</span> <span class="nav-text">效果叠加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-number">1.5.</span> <span class="nav-text">兼容性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性渐变-linear-gradient"><span class="nav-number">1.</span> <span class="nav-text">线性渐变 linear-gradient</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#📚语法定义"><span class="nav-number">1.1.</span> <span class="nav-text">📚语法定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🚥控制渐变方向"><span class="nav-number">1.2.</span> <span class="nav-text">🚥控制渐变方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🚥控制起止颜色-lt-color-stop-gt"><span class="nav-number">1.3.</span> <span class="nav-text">🚥控制起止颜色 &lt;color-stop&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#📚重复渐变语法定义"><span class="nav-number">1.4.</span> <span class="nav-text">📚重复渐变语法定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#💦兼容性"><span class="nav-number">1.5.</span> <span class="nav-text">💦兼容性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#径向渐变-radial-gradient"><span class="nav-number">2.</span> <span class="nav-text">径向渐变 radial-gradient</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#📚语法定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">📚语法定义</span></a></li></ol></li></ol></div>
             
 
           </div>
