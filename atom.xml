@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fujiayishally.github.io/"/>
-  <updated>2019-07-19T12:55:53.540Z</updated>
+  <updated>2019-07-22T07:03:01.079Z</updated>
   <id>https://fujiayishally.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>waving underline</title>
+    <link href="https://fujiayishally.github.io/2019/07/22/waving-underline/"/>
+    <id>https://fujiayishally.github.io/2019/07/22/waving-underline/</id>
+    <published>2019-07-22T07:03:01.000Z</published>
+    <updated>2019-07-22T07:03:01.079Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="xxx"><a href="#xxx" class="headerlink" title="xxx"></a>xxx</h1><h2 id="🤔问题"><a href="#🤔问题" class="headerlink" title="🤔问题"></a>🤔问题</h2><h2 id="💡思路"><a href="#💡思路" class="headerlink" title="💡思路"></a>💡思路</h2><h2 id="📚-定义"><a href="#📚-定义" class="headerlink" title="📚 定义"></a>📚 定义</h2><h2 id="👀-效果对比"><a href="#👀-效果对比" class="headerlink" title="👀 效果对比 "></a>👀 效果对比 </h2><h2 id="🎉解决方案"><a href="#🎉解决方案" class="headerlink" title="🎉解决方案"></a>🎉解决方案</h2><h2 id="🚧注意"><a href="#🚧注意" class="headerlink" title="🚧注意"></a>🚧注意</h2><h2 id="🌵最后"><a href="#🌵最后" class="headerlink" title="🌵最后"></a>🌵最后</h2><ul><li>这是 <a href="xxx">本例代码</a>以供参考</li><li>本问题摘自xxx，致谢</li><li>点<a href="xxx">📖</a> 查看更多xxx，致敬</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;xxx&quot;&gt;&lt;a href=&quot;#xxx&quot; class=&quot;headerlink&quot; title=&quot;xxx&quot;&gt;&lt;/a&gt;xxx&lt;/h1&gt;&lt;h2 id=&quot;🤔问题&quot;&gt;&lt;a href=&quot;#🤔问题&quot; class=&quot;headerlink&quot; title=&quot;🤔问题&quot;&gt;&lt;/a&gt;🤔问
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>BFC</title>
