@@ -136,18 +136,27 @@
 
 
 
-<meta name="description" content="📚块级元素的流特性与响应式布局🤔什么是块级元素的流特性🔧利用流特性实现多栏布局📚BFC与响应式布局🤔什么是BFC🤔如何触发BFC🔧利用BFC实现自适应布局🚧注意🌵最后 这是 本例代码以供参考 本问题摘自xxx，致谢 点📖 查看更多xxx，致敬">
+<meta name="description" content="📚块级元素的流特性与响应式布局🤔什么是块级元素的流特性块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的content、padding、margin宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。 🔧利用流特性实现多栏布局利用块元素的流特性，如果给块元素设置固定的左右padding或margin，盒子就只有content会随着父容器的大小变化而变化。">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BFC 块级格式化上下文">
 <meta property="og:url" content="https://fujiayishally.github.io/2019/07/17/BFC/index.html">
 <meta property="og:site_name" content="Shally&#39;s Blog">
-<meta property="og:description" content="📚块级元素的流特性与响应式布局🤔什么是块级元素的流特性🔧利用流特性实现多栏布局📚BFC与响应式布局🤔什么是BFC🤔如何触发BFC🔧利用BFC实现自适应布局🚧注意🌵最后 这是 本例代码以供参考 本问题摘自xxx，致谢 点📖 查看更多xxx，致敬">
+<meta property="og:description" content="📚块级元素的流特性与响应式布局🤔什么是块级元素的流特性块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的content、padding、margin宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。 🔧利用流特性实现多栏布局利用块元素的流特性，如果给块元素设置固定的左右padding或margin，盒子就只有content会随着父容器的大小变化而变化。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-22T15:26:49.610Z">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:image" content="https://fujiayishally.github.io/images/header.jpg">
+<meta property="og:updated_time" content="2019-07-23T00:42:36.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BFC 块级格式化上下文">
-<meta name="twitter:description" content="📚块级元素的流特性与响应式布局🤔什么是块级元素的流特性🔧利用流特性实现多栏布局📚BFC与响应式布局🤔什么是BFC🤔如何触发BFC🔧利用BFC实现自适应布局🚧注意🌵最后 这是 本例代码以供参考 本问题摘自xxx，致谢 点📖 查看更多xxx，致敬">
+<meta name="twitter:description" content="📚块级元素的流特性与响应式布局🤔什么是块级元素的流特性块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的content、padding、margin宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。 🔧利用流特性实现多栏布局利用块元素的流特性，如果给块元素设置固定的左右padding或margin，盒子就只有content会随着父容器的大小变化而变化。">
+<meta name="twitter:image" content="https://fujiayishally.github.io/images/header.jpg">
 
 
 
@@ -390,8 +399,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-22T23:26:49+08:00">
-                2019-07-22
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-23T08:42:36+08:00">
+                2019-07-23
               </time>
             
           </span>
@@ -477,10 +486,96 @@
       <!--自定义，首页文章列表-->
       
         <div class="post_article"> 
-          <h2 id="📚块级元素的流特性与响应式布局"><a href="#📚块级元素的流特性与响应式布局" class="headerlink" title="📚块级元素的流特性与响应式布局"></a>📚块级元素的流特性与响应式布局</h2><h3 id="🤔什么是块级元素的流特性"><a href="#🤔什么是块级元素的流特性" class="headerlink" title="🤔什么是块级元素的流特性"></a>🤔什么是块级元素的流特性</h3><h3 id="🔧利用流特性实现多栏布局"><a href="#🔧利用流特性实现多栏布局" class="headerlink" title="🔧利用流特性实现多栏布局"></a>🔧利用流特性实现多栏布局</h3><h2 id="📚BFC与响应式布局"><a href="#📚BFC与响应式布局" class="headerlink" title="📚BFC与响应式布局"></a>📚BFC与响应式布局</h2><h3 id="🤔什么是BFC"><a href="#🤔什么是BFC" class="headerlink" title="🤔什么是BFC"></a>🤔什么是BFC</h3><h3 id="🤔如何触发BFC"><a href="#🤔如何触发BFC" class="headerlink" title="🤔如何触发BFC"></a>🤔如何触发BFC</h3><h3 id="🔧利用BFC实现自适应布局"><a href="#🔧利用BFC实现自适应布局" class="headerlink" title="🔧利用BFC实现自适应布局"></a>🔧利用BFC实现自适应布局</h3><h2 id="🚧注意"><a href="#🚧注意" class="headerlink" title="🚧注意"></a>🚧注意</h2><h2 id="🌵最后"><a href="#🌵最后" class="headerlink" title="🌵最后"></a>🌵最后</h2><ul>
-<li>这是 <a href="xxx">本例代码</a>以供参考</li>
-<li>本问题摘自xxx，致谢</li>
-<li>点<a href="xxx">📖</a> 查看更多xxx，致敬</li>
+          <h2 id="📚块级元素的流特性与响应式布局"><a href="#📚块级元素的流特性与响应式布局" class="headerlink" title="📚块级元素的流特性与响应式布局"></a>📚块级元素的流特性与响应式布局</h2><h3 id="🤔什么是块级元素的流特性"><a href="#🤔什么是块级元素的流特性" class="headerlink" title="🤔什么是块级元素的流特性"></a>🤔什么是块级元素的流特性</h3><p>块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的<code>content</code>、<code>padding</code>、<code>margin</code>宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。</p>
+<h3 id="🔧利用流特性实现多栏布局"><a href="#🔧利用流特性实现多栏布局" class="headerlink" title="🔧利用流特性实现多栏布局"></a>🔧利用流特性实现多栏布局</h3><p>利用块元素的流特性，如果给块元素设置固定的左右padding或margin，盒子就只有content会随着父容器的大小变化而变化。此时放置脱离文档流的float元素或绝对定位元素到留白处，就实现了多栏布局。例如：</p>
+<style>
+    .parent1{width:50%;resize:horizontal;overflow:auto;margin-bottom:20px;}
+    .parent1 img{width:100%;margin-bottom:20px;}
+    .side-left-1{float:left;width:5em;}
+    .side-right-1{float:right;width:5em;}
+    .child1{margin:auto 6em;background-color:grey;}
+</style>
+
+<div class="parent1">
+    <div class="side-left-1"> <img src="https://fujiayishally.github.io/images/header.jpg"></div>
+    <div class="side-right-1"> <img src="https://fujiayishally.github.io/images/header.jpg"></div>
+    <div class="child1"><img src="https://fujiayishally.github.io/images/header.jpg"></div>
+</div>
+
+<p>这种方案有明显的缺点，就是必须知道留白尺寸。如果留白宽度是未知的，又希望能够实现多栏布局该怎么办呢？利用BFC的布局可以帮到你。</p>
+<h2 id="📚BFC与响应式布局"><a href="#📚BFC与响应式布局" class="headerlink" title="📚BFC与响应式布局"></a>📚BFC与响应式布局</h2><h3 id="🤔什么是BFC"><a href="#🤔什么是BFC" class="headerlink" title="🤔什么是BFC"></a>🤔什么是BFC</h3><p>BFC(Block Formatting Context)翻译过来就是“块级格式化上下文”。</p>
+<h3 id="🤔如何触发BFC"><a href="#🤔如何触发BFC" class="headerlink" title="🤔如何触发BFC"></a>🤔如何触发BFC</h3><p>常见的BFC触发方式有下面几种：</p>
+<ul>
+<li><code>float : !none</code>。</li>
+<li><code>overflow : [ auto | scroll | hidden]</code></li>
+<li><code>display : [ table-cell | table-caption | inline-block ]</code></li>
+<li><code>position : ![ relative || static]</code></li>
+</ul>
+<h3 id="🔧利用BFC实现自适应布局"><a href="#🔧利用BFC实现自适应布局" class="headerlink" title="🔧利用BFC实现自适应布局"></a>🔧利用BFC实现自适应布局</h3><p>利用BFC的独立性特点，尝试再一次实现多栏布局。</p>
+<p>首先，普通情况下正常文本流与float图片在一起时，会表现出环绕效果：</p>
+<style>
+    .parent2{width:50%;margin-bottom:20px;}
+    .side-left-2{float:left;width:30%;}
+    .child2{background-color:hsla(0,0%,100%,.5);}
+</style>
+
+<div class="parent2">
+    <img class="side-left-2" src="https://fujiayishally.github.io/images/header.jpg">
+    <div class="child2">块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的`content`、`padding`、`margin`宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。BFC(Block Formatting Context)翻译过来就是“块级格式化上下文”。</div>
+</div>
+
+<p>图片和文本块是兄弟元素，由于图片使用了属性<code>float</code>脱离文档流，它和后来填补空位跟上的文本块发生了重叠。<code>float</code>的特性之一是发生重叠时，文字会环绕float元素而不是被遮挡（<code>float</code>的设计初衷就是为了实现文字环绕效果）。</p>
+<p>按照上面介绍的BFC特性，可以设想触发了文本块的BFC后，文本块会和图片相互独立，不再彼此影响。所以给文本块添加属性<code>overflow:hidden</code>：</p>
+<style>
+    .parent3{width:50%;resize:horizontal;overflow:auto;margin-bottom:20px;}
+    .side-left-3{float:left;width:30%; }
+    .child3{background-color:hsla(0,0%,100%,.5);overflow:hidden;}
+</style>
+
+<div class="parent3">
+    <img class="side-left-3" src="https://fujiayishally.github.io/images/header.jpg">
+    <div class="child3">块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的`content`、`padding`、`margin`宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。BFC(Block Formatting Context)翻译过来就是“块级格式化上下文”。</div>
+</div>
+
+<p>果然，文字不再环绕图片了，图片和文本块也会响应容器大小的变化而自动调整。</p>
+<h2 id="🚧注意"><a href="#🚧注意" class="headerlink" title="🚧注意"></a>🚧注意</h2><p>给浮动图片添加<code>margin-right:15px</code> ：</p>
+<style>
+    .parent4{width:50%;resize:horizontal;overflow:auto;margin-bottom:20px;}
+    .side-left-4{float:left;width:30%;margin-right:15px !important;}
+    .child4{background-color:hsla(0,0%,100%,.5);overflow:hidden;margin-left:1em; }
+</style>
+
+<div class="parent4">
+    <img class="side-left-4" src="https://fujiayishally.github.io/images/header.jpg">
+    <div class="child4">块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的`content`、`padding`、`margin`宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。BFC(Block Formatting Context)翻译过来就是“块级格式化上下文”。</div>
+</div>
+
+<p>给文本块添加<code>margin-left:15px</code> ：</p>
+<style>
+    .parent5{width:50%;resize:horizontal;overflow:auto;margin-bottom:20px;}
+    .side-left-5{float:left;width:30%;}
+    .child5{background-color:hsla(0,0%,100%,.5);overflow:hidden;margin-left:15px; }
+</style>
+
+<div class="parent5">
+    <img class="side-left-5" src="https://fujiayishally.github.io/images/header.jpg">
+    <div class="child5">块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的`content`、`padding`、`margin`宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。BFC(Block Formatting Context)翻译过来就是“块级格式化上下文”。</div>
+</div>
+
+<p>给文本块添加足够大的左边距<code>margin-left:calc(30% + 15px)</code>(图片宽度<code>30%</code>)：</p>
+<style>
+    .parent6{width:50%;resize:horizontal;overflow:auto;margin-bottom:20px;}
+    .side-left-6{float:left;width:30%;}
+    .child6{background-color:hsla(0,0%,100%,.5);overflow:hidden;margin-left:calc(30% + 15px); }
+</style>
+
+<div class="parent6">
+    <img class="side-left-6" src="https://fujiayishally.github.io/images/header.jpg">
+    <div class="child6">块级元素的流特性是指：块级元素盒子在默认情况下会自动填满父级容器。也就是说元素的`content`、`padding`、`margin`宽度会彼此相互调和，确保最终加在一起的总宽度等于父容器宽度。BFC(Block Formatting Context)翻译过来就是“块级格式化上下文”。</div>
+</div>
+
+<h2 id="🌵最后"><a href="#🌵最后" class="headerlink" title="🌵最后"></a>🌵最后</h2><ul>
+<li>点<a href="https://www.w3.org/TR/CSS22/visuren.html#block-formatting" target="_blank" rel="noopener">📖</a> 查看BFC标准内容，致敬</li>
 </ul>
 
         </div>
@@ -615,7 +710,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
